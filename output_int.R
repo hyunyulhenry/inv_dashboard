@@ -3,8 +3,8 @@ tabItems(
   tabItem("int_chart",
           fluidRow(
             column(width = 12, height = 700,
-                   uiOutput('bond_time_type'), uiOutput('time_int'),
-                   textOutput('z'),
+                   uiOutput('bond_time_counry'),
+                   uiOutput('bond_time_type'), 
                    plotlyOutput('int_chart', height = 600)
                    
             )

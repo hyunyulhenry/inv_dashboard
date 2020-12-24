@@ -118,8 +118,13 @@ output$int_chart = renderPlotly({
   to = as.numeric(Sys.time()) %>% round(., 0)
   type = input$bond_time_type
   
-  url = paste0('https://tvc4.forexpros.com/80885e2117b48eae99ebd1ed02d51403/1608791266/1/1/8/history?symbol=23705&resolution=',
-               type,
+  sym = switch(input$bond_time_counry,
+               'US 10Y' = 23705,
+               'KOR 10Y' = 29292
+  )  
+  
+  url = paste0('https://tvc4.forexpros.com/80885e2117b48eae99ebd1ed02d51403/1608791266/1/1/8/history?symbol=',
+               sym,'&resolution=', type,
                '&from=', from,
                '&to=', to)
   

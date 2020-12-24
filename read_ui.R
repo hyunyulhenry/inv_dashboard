@@ -1,3 +1,16 @@
+output$bond_time_counry = renderUI({
+  radioGroupButtons(
+    inputId = "bond_time_counry",
+    choices = c('US 10Y', 'KOR 10Y'),
+    selected = 'US 10Y',
+    checkIcon = list(
+      yes = tags$i(class = "fa fa-check-square", 
+                   style = "color: steelblue"),
+      no = tags$i(class = "fa fa-square-o", 
+                  style = "color: steelblue"))
+  )
+})
+
 output$bond_time_type = renderUI({
   radioGroupButtons(
     inputId = "bond_time_type",

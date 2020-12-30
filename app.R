@@ -10,15 +10,20 @@ ui <- dashboardPage(
   
   # Body
   dashboardBody(
-    source('output_int.R', local = TRUE)$value
+    source('output_body.R', local = TRUE)$value
   )
 )
 
 
 server <- function(input, output) {
   
+  # Crawling
+  source('read_eq.R', local = TRUE)
   source('read_int_rate.R', local = TRUE)
-  source('read_ui.R', local = TRUE)
+  
+  # UI
+  source('read_ui_eq.R', local = TRUE)
+  source('read_ui_bond.R', local = TRUE)
   
 
 }

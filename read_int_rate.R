@@ -107,7 +107,6 @@ output$int_gov_bond = renderDataTable({
   
 })
 
-
 output$int_chart = renderPlotly({
 
   req(input$bond_time_type)
